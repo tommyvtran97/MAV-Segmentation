@@ -3,7 +3,7 @@
 
 In this work, we evaluate the performance of state-of-the-art methods for video semantic segmentation in terms of accuracy and inference speed on three datasets with different camera motion configurations. The results show that using a RNN with convolutional operators outperforms all methods and achieves a performance boost of 10.8% on the KITTI (MOTS) dataset with 3 DoF motion and a small 0.6% improvement on the CyberZoo dataset with 6 DoF motion over the single  frame semantic segmentation method. The inference speed is measured on the CyberZoo dataset, achieving 321 fps on a NVIDIA GeForce RTX 2060 GPU and ... fps on a NVIDIA Jetson TX2.
 
-![alt text](https://github.com/tommyvtran97/MAV-Segmentation/blob/main/Media/MAVRNN.png)
+![alt text](https://github.com/tommyvtran97/MAV-Segmentation/blob/master/Media/MAVRNN.png)
 
 ## Installation
 Create a conda environment with Python=3.8:
@@ -90,12 +90,12 @@ In this section, a detailed overview of the structure of the folder is presented
 
 ## Qualitative Results
 
-![alt text](https://github.com/tommyvtran97/MAV-Segmentation/blob/main/Media/Cars_General_Marked_Red.png) 
+![alt text](https://github.com/tommyvtran97/MAV-Segmentation/blob/master/Media/Cars_General_Marked_Red.png) 
 
 &nbsp;
 &nbsp;
 &nbsp;
 
-![alt text](https://github.com/tommyvtran97/MAV-Segmentation/blob/main/Media/CyberZoo_Normal_1_Marked_Red.png)
+![alt text](https://github.com/tommyvtran97/MAV-Segmentation/blob/master/Media/CyberZoo_Normal_1_Marked_Red.png)
 
 

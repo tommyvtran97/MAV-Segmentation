@@ -99,8 +99,8 @@ for ds in dataset_folders:
 				starter.record()
 
 				# # Include optical flow run-time
-				# tensor_1 = torch.randn((3, 620, 186))
-				# tensor_2 = torch.randn((3, 620, 186))
+				# tensor_1 = torch.randn((3, 288, 224))
+				# tensor_2 = torch.randn((3, 288, 224))
 				# opt_flow = estimate(tensor_1, tensor_2)
 
 				x = model(imgs[:, :len(cat_type), :, :].to(device, dtype=torch.float), imgs[:, len(cat_type):, :, :].to(device, dtype=torch.float))

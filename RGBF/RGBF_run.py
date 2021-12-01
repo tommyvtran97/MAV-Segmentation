@@ -20,7 +20,7 @@ import csv
 # Initialize hyper parameters
 sequence_size 	= 2
 batch_size		= 1
-resolution		= (228, 224)
+resolution		= (288, 224)
 k_fold			= 1
 
 validate		= True

@@ -3,7 +3,7 @@
 
 In this work, we evaluate the performance of state-of-the-art methods for video semantic segmentation in terms of accuracy and inference speed on three datasets with different camera motion configurations. The results show that using a RNN with convolutional operators outperforms all methods and achieves a performance boost of 10.8% on the KITTI (MOTS) dataset with 3 DoF motion and a small 0.6% improvement on the CyberZoo dataset with 6 DoF motion over the single  frame semantic segmentation method. The inference speed is measured on the CyberZoo dataset, achieving 321 fps on a NVIDIA GeForce RTX 2060 GPU and ... fps on a NVIDIA Jetson TX2.
 
-![alt text](https://github.com/tommyvtran97/MAV_Segmentation/blob/main/Media/MAVRNN.png)
+![alt text](https://github.com/tommyvtran97/MAV-Segmentation/blob/main/Media/MAVRNN.png)
 
 ## Installation
 Create a conda environment with Python=3.8:
@@ -16,11 +16,7 @@ Install the following python dependencies:
 * matplotlib
 * pytorch
 * opencv
-* cupy        (Required for running optical flow)
-
-Download the dataset and trained models for each network with the following link:
-
-- Add Link
+* cupy (version should match for example cupy 10.1 with cuda 10.1)
 
 Copy the content in the dataset folder as follows:
 ```
@@ -28,18 +24,6 @@ Copy the content in the dataset folder as follows:
 │   └── CyberZoo/*                        # Folder containing CyberZoo dataset
 │   └── KITTI_Cars/*                      # Folder containing KITTI (MOTS) dataset
 │   └── KITTI_Pedestrians/*               # Folder containing KITTI (MOTS Challenge) dataset
-
-```
-
-Next copy the 'models' folder for each network to the correct location for each network. In this example we show it for RGBF network:
-```
-├── RGBF
-│   └── correlation
-│       └── correlatation.py              # Correlation file required to run LiteFlowNet
-│   └── models/                           # Folder containing RGBF models from K=5 cross validation
-│       └── CyberZoo/*                    # Folder containing RGBF models on the CyberZoo dataset
-│       └── KITTI_Cars/*                  # Folder containing RGBF models on the KITTI (MOTS) dataset
-│       └── KITTI_Pedestrians/*           # Folder containing RGBF models on the KITTI (MOTS Challenge) dataset
 
 ```
 
@@ -100,20 +84,18 @@ In this section, a detailed overview of the structure of the folder is presented
 │       └── convLSTM.py                   # File containing the structure of a convLSTM
 │       └── convRNN.py                    # File containing the structure of a convRNN
 │       └── loss.py
-└── Utils
-│   └── network_results.py                # File showing qualitative comparison of the networks
 └── 
 
 ```
 
 ## Qualitative Results
 
-![alt text](https://github.com/tommyvtran97/MAV_Segmentation/blob/main/Media/Cars_General_Marked_Red.png) 
+![alt text](https://github.com/tommyvtran97/MAV-Segmentation/blob/main/Media/Cars_General_Marked_Red.png) 
 
 &nbsp;
 &nbsp;
 &nbsp;
 
-![alt text](https://github.com/tommyvtran97/MAV_Segmentation/blob/main/Media/CyberZoo_Normal_1_Marked_Red.png)
+![alt text](https://github.com/tommyvtran97/MAV-Segmentation/blob/main/Media/CyberZoo_Normal_1_Marked_Red.png)
 
 

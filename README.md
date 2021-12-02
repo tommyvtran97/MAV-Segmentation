@@ -16,7 +16,7 @@ Install the following python dependencies:
 * matplotlib
 * pytorch
 * opencv
-* cupy (version should match for example cupy 10.1 with cuda 10.1)
+* cupy (version should match with cuda, for example cupy 10.1 with cuda 10.1, only required to run LiteFlowNet)
 
 Copy the content in the dataset folder as follows:
 ```

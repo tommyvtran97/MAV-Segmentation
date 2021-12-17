@@ -1,7 +1,7 @@
 # Semantic Segmentation using Deep Neural Networks for MAVs
 
 
-In this work, we evaluate the performance of state-of-the-art methods such as Recurrent Neural Networks (RNN), 3D Convolutional Neural Network (CNN), and optical flow for video semantic segmentation in terms of accuracy and inference speed on three datasets with different camera motion configurations. The results show that using an RNN with convolutional operators outperforms all methods and achieves a performance boost of 10.8\% on the KITTI (MOTS) dataset with 3 degrees of freedom (DoF) motion and a small 0.6\% improvement on the CyberZoo dataset with 6 DoF motion over the frame-based semantic segmentation method. The inference speed was measured on the CyberZoo dataset, achieving 321 fps on a NVIDIA GeForce RTX 2060 GPU and ... fps on a NVIDIA Jetson TX2. 
+In this work, we evaluate the performance of state-of-the-art methods such as Recurrent Neural Networks (RNNs), 3D Convolutional Neural Networks (CNNs), and optical flow for video semantic segmentation in terms of accuracy and inference speed on three datasets with different camera motion configurations. The results show that using an RNN with convolutional operators outperforms all methods and achieves a performance boost of 10.8\% on the KITTI (MOTS) dataset with 3 degrees of freedom (DoF) motion and a small 0.6\% improvement on the CyberZoo dataset with 6 DoF motion over the frame-based semantic segmentation method. The inference speed was measured on the CyberZoo dataset, achieving 321 fps on an NVIDIA GeForce RTX 2060 GPU and 30 fps on a NVIDIA Jetson TX2. 
 
 ![alt text](https://github.com/tommyvtran97/MAV-Segmentation/blob/master/Media/MAVRNN.png)
 
@@ -12,7 +12,7 @@ Create a conda environment with Python 3.8:
 conda create -n python_env python=3.8
 ```
 
-Install the following python dependencies:
+Install the following python packages:
 
 * numpy
 * matplotlib
@@ -37,11 +37,10 @@ cd U-Net_RNN
 python RNN_train.py
 ```
 
-The evaluation settings can be changed in `RNN_run.py`. To evaluate the trained models run:
+To show the results of U-Net, RNN and LSTM. Use '1' for the KITTI dataset and '2' for the CyberZoo dataset:
 
 ```
-cd U-Net_RNN
-python RNN_run.py
+python results.py --dataset 1
 ```
 
 ## Content and Folder Structure

@@ -45,7 +45,7 @@ python results.py --dataset 1
 
 The results below show from top to bottom: RGB - GT - U-Net - RNN - LSTM
 
-![alt text](https://github.com/tommyvtran97/MAV-Segmentation/blob/master/Media/results.png)
+![alt text](https://github.com/tommyvtran97/MAV-Segmentation/blob/master/Media/Results.png)
 
 ## Content and Folder Structure
 In this section, a detailed overview of the structure of the folder is presented.

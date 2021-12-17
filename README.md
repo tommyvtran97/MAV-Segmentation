@@ -1,14 +1,16 @@
 # Semantic Segmentation using Deep Neural Networks for MAVs
 
 
-In this work, we evaluate the performance of state-of-the-art methods for video semantic segmentation in terms of accuracy and inference speed on three datasets with different camera motion configurations. The results show that using a RNN with convolutional operators outperforms all methods and achieves a performance boost of 10.8% on the KITTI (MOTS) dataset with 3 DoF motion and a small 0.6% improvement on the CyberZoo dataset with 6 DoF motion over the single  frame semantic segmentation method. The inference speed is measured on the CyberZoo dataset, achieving 321 fps on a NVIDIA GeForce RTX 2060 GPU and ... fps on a NVIDIA Jetson TX2.
+In this work, we evaluate the performance of state-of-the-art methods such as Recurrent Neural Networks (RNN), 3D Convolutional Neural Network (CNN), and optical flow for video semantic segmentation in terms of accuracy and inference speed on three datasets with different camera motion configurations. The results show that using an RNN with convolutional operators outperforms all methods and achieves a performance boost of 10.8\% on the KITTI (MOTS) dataset with 3 degrees of freedom (DoF) motion and a small 0.6\% improvement on the CyberZoo dataset with 6 DoF motion over the frame-based semantic segmentation method. The inference speed was measured on the CyberZoo dataset, achieving 321 fps on a NVIDIA GeForce RTX 2060 GPU and ... fps on a NVIDIA Jetson TX2. 
 
 ![alt text](https://github.com/tommyvtran97/MAV-Segmentation/blob/master/Media/MAVRNN.png)
 
 ## Installation
-Create a conda environment with Python=3.8:
+Create a conda environment with Python 3.8:
 
-- `conda create -n python_env python=3.8`
+```
+conda create -n python_env python=3.8
+```
 
 Install the following python dependencies:
 
@@ -19,28 +21,33 @@ Install the following python dependencies:
 * cupy (version should match with cuda, for example cupy 10.1 with cuda 10.1, only required to run LiteFlowNet)
 
 Copy the content in the dataset folder as follows:
+
 ```
 ├── Dataset
 │   └── CyberZoo/*                        # Folder containing CyberZoo dataset
 │   └── KITTI_Cars/*                      # Folder containing KITTI (MOTS) dataset
 │   └── KITTI_Pedestrians/*               # Folder containing KITTI (MOTS Challenge) dataset
-
 ```
 
 ## Usage 
-The content consists of 5 networks, RGBF, RGBF_Fusion, U-Net, U-Net_3D, and U-Net_RNN. We show an example for the U-Net_RNN folder, the same instructions holds for the other folders. The training settings can be changed in the `RNN_train.py`. To train the network run:
+The content consists of 5 networks; RGBF, RGBF_Fusion, U-Net, U-Net_3D, and U-Net_RNN. We show an example for the U-Net_RNN folder, the same instructions hold for the other folders. The training settings can be changed in the `RNN_train.py`. To train the network run:
 
-- `cd U-Net_RNN`
-- `python RNN_train.py`
+```
+cd U-Net_RNN
+python RNN_train.py
+```
 
 The evaluation settings can be changed in `RNN_run.py`. To evaluate the trained models run:
-- `cd U-Net_RNN`
-- `python RNN_run.py`
+
+```
+cd U-Net_RNN
+python RNN_run.py
+```
 
 ## Content and Folder Structure
 In this section, a detailed overview of the structure of the folder is presented.
-```
 
+```
 ├── Dataset
 │   └── CyberZoo/*                        # Folder containing CyberZoo dataset
 │   └── KITTI_Cars/*                      # Folder containing KITTI (MOTS) dataset
@@ -85,7 +92,6 @@ In this section, a detailed overview of the structure of the folder is presented
 │       └── convRNN.py                    # File containing the structure of a convRNN
 │       └── loss.py
 └── 
-
 ```
 
 ## Qualitative Results

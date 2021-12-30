@@ -1,7 +1,6 @@
 # Semantic Segmentation using Deep Neural Networks for MAVs
 
-
-In this work, we evaluate the performance of state-of-the-art methods such as Recurrent Neural Networks (RNNs), 3D Convolutional Neural Networks (CNNs), and optical flow for video semantic segmentation in terms of accuracy and inference speed on three datasets with different camera motion configurations. The results show that using an RNN with convolutional operators outperforms all methods and achieves a performance boost of 10.8\% on the KITTI (MOTS) dataset with 3 degrees of freedom (DoF) motion and a small 0.6\% improvement on the CyberZoo dataset with 6 DoF motion over the frame-based semantic segmentation method. The inference speed was measured on the CyberZoo dataset, achieving 321 fps on an NVIDIA GeForce RTX 2060 GPU and 30 fps on a NVIDIA Jetson TX2. 
+In this work, we evaluate the performance of state-of-the-art methods such as Recurrent Neural Networks (RNNs), 3D Convolutional Neural Networks (CNNs), and optical flow for video semantic segmentation in terms of accuracy and inference speed on three datasets with different camera motion configurations. The results show that using an RNN with convolutional operators outperforms all methods and achieves a performance boost of 10.8\% on the KITTI (MOTS) dataset with 3 degrees of freedom (DoF) motion and a small 0.6\% improvement on the CyberZoo dataset with 6 DoF motion over the single-frame-based semantic segmentation method. The inference speed was measured on the CyberZoo dataset, achieving 321 fps on an NVIDIA GeForce RTX 2060 GPU and 30 fps on an NVIDIA Jetson TX2 mobile computer. 
 
 ![alt text](https://github.com/tommyvtran97/MAV-Segmentation/blob/master/Media/MAVRNN.png)
 
@@ -20,13 +19,18 @@ Install the following python packages:
 * opencv
 * cupy (version should match with cuda, for example cupy 10.1 with cuda 10.1, only required to run LiteFlowNet)
 
-Copy the content in the dataset folder as follows:
+Download the dataset from [add link] and copy the 'Dataset' folder into the main folder as shown below:
 
 ```
 ├── Dataset
-│   └── CyberZoo/*                        # Folder containing CyberZoo dataset
-│   └── KITTI_Cars/*                      # Folder containing KITTI (MOTS) dataset
-│   └── KITTI_Pedestrians/*               # Folder containing KITTI (MOTS Challenge) dataset
+├── Figures
+├── Media                                
+└── RGBF
+└── RGBF_Fusion
+└── U-Net
+└── U-Net_3D
+└── U-Net_RNN
+└── 
 ```
 
 ## Usage 

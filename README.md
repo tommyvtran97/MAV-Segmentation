@@ -30,7 +30,6 @@ Download the dataset from [add link] and copy the 'Dataset' folder into the main
 └── U-Net
 └── U-Net_3D
 └── U-Net_RNN
-└── 
 ```
 
 ## Usage 

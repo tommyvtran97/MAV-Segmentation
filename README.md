@@ -33,7 +33,7 @@ Download the dataset from [add link] and copy the 'Dataset' folder into the main
 ```
 
 ## Usage 
-The content consists of 5 networks; RGBF, RGBF_Fusion, U-Net, U-Net_3D, and U-Net_RNN. We show an example for the U-Net_RNN folder, the same instructions hold for the other folders. The training settings can be changed in the `RNN_train.py`. To train the network run:
+The content consists of 5 networks; RGBF, RGBF_Fusion, U-Net, U-Net_3D, and U-Net_RNN. We show an example for the U-Net_RNN folder, the same instructions hold for the other folders. The training settings can be changed in `RNN_train.py`. To train the network run:
 
 ```
 cd U-Net_RNN

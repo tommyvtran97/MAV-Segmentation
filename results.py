@@ -74,7 +74,7 @@ while True:
 
 		cv.imshow(dataset + ': ' + UNet_path[folder_idx].split('/')[-1], concat_output)
 
-		k = cv.waitKey(1) & 0xFF
+		k = cv.waitKey(10) & 0xFF
 
 		if k == 27:
 			cv.destroyAllWindows()

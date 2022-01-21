@@ -1,6 +1,6 @@
 # Semantic Segmentation using Deep Neural Networks for MAVs
 
-In this work, we evaluate the performance of state-of-the-art methods such as Recurrent Neural Networks (RNNs), 3D Convolutional Neural Networks (CNNs), and optical flow for video semantic segmentation in terms of accuracy and inference speed on three datasets with different camera motion configurations. The results show that using an RNN with convolutional operators outperforms all methods and achieves a performance boost of 10.8\% on the KITTI (MOTS) dataset with 3 degrees of freedom (DoF) motion and a small 0.6\% improvement on the CyberZoo dataset with 6 DoF motion over the single-frame-based semantic segmentation method. The inference speed was measured on the CyberZoo dataset, achieving 321 fps on an NVIDIA GeForce RTX 2060 GPU and 30 fps on an NVIDIA Jetson TX2 mobile computer. 
+Semantic segmentation methods have been developed and applied to single images for object segmentation. However, for robotic applications such as high-speed agile Micro Air Vehicles (MAVs) in Autonomous Drone Racing (ADR), it is more interesting to consider temporal information as video sequences are correlated over time. In this work, we evaluate the performance of state-of-the-art methods such as Recurrent Neural Networks (RNNs), 3D Convolutional Neural Networks (CNNs), and optical flow for video semantic segmentation in terms of accuracy and inference speed on three datasets with different camera motion configurations. The results show that using an RNN with convolutional operators outperforms all methods on the KITTI (MOTS) and CyberZoo dataset with 3 degrees of freedom (DoF) and 6 DoF, respectively. The inference speed was measured on the CyberZoo dataset achieving 321 Hz on an NVIDIA Geforce RTX 2060 GPU and 30 Hz on an NVIDIA Jetson TX2 mobile computer.
 
 ![alt text](https://github.com/tommyvtran97/MAV-Segmentation/blob/master/Media/MAVRNN.png)
 
@@ -19,10 +19,32 @@ Install the following python packages:
 * opencv
 * cupy (version should match with cuda, for example cupy 10.1 with cuda 10.1, only required to run LiteFlowNet)
 
-Download the dataset from [add link] and copy the 'Dataset' folder into the main folder as shown below:
+Download the datasets from the provided links. 
+
+|#|Datasets|Download|
+|---|----|-----|
+|1|CyberZoo|[Link](https://drive.google.com/file/d/1fSv9Jqwge47XaM-f6HYxepWwz12mQ78-/view?usp=sharing)|
+|2|KITTI MOTS|[Link](https://drive.google.com/file/d/1PTn7-sze5NqKp9KPQy5uaVQI6kWsEGYh/view?usp=sharing)|
+|3|KITTI MOTS Challenge|[Link](https://drive.google.com/file/d/1Q1ispTWUObIiN_NQyAVEXi_IdQC6cNrV/view?usp=sharing)|
+
+Additionally:
+* Download the images for the KITTI MOTS dataset from [Link](http://www.cvlibs.net/download.php?file=data_tracking_image_2.zip) and add the training images to the directory `KITTI_Cars/training/image/`.
+* Download training dataset for the CyberZoo dataset from [Link] and add them to the directory `CyberZoo/training/`.
+
+If done correctly, the folder structure should be similar as shown below.
 
 ```
 ├── Dataset
+│   └── CyberZoo
+│       └── network        
+│       └── training
+│           └── horizontal
+│           └── image
+│           └── magnitude
+│           └── mask
+│           └── vertical
+│   └── KITTI_Cars/*
+│   └── KITTI_Pedestrians/*  
 ├── Figures
 ├── Media                                
 └── RGBF

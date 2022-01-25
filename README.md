@@ -29,7 +29,7 @@ Download the datasets from the provided links.
 
 Additionally:
 * Download the images for the KITTI MOTS dataset from [Link](http://www.cvlibs.net/download.php?file=data_tracking_image_2.zip) and add the training images to the directory `KITTI_Cars/training/image/`.
-* Download training dataset for the CyberZoo dataset from [Link] and add them to the directory `CyberZoo/training/`.
+* Download the training dataset for the CyberZoo dataset from [Link](https://doi.org/10.4121/19042235.v1) and add them to the directory `CyberZoo/training/`.
 
 If done correctly, the folder structure should be similar as shown below.
 
